@@ -1,6 +1,6 @@
-#  SOC Lab - Detecção de Brute Force SSH com Splunk
+  SOC Lab - Detecção de Brute Force SSH com Splunk
 
-##  Visão Geral
+  Visão Geral
 
 Este projeto simula um cenário real de um SOC (Security Operations Center), onde um ataque de força bruta via SSH é executado e detectado utilizando o Splunk.
 
@@ -8,7 +8,7 @@ O objetivo é demonstrar, na prática, habilidades essenciais de um Analista de 
 
 ---
 
-## 🧠 Arquitetura do Laboratório
+ Arquitetura do Laboratório
 
 * Atacante: Kali Linux
 * Alvo: Ubuntu Server
@@ -21,7 +21,7 @@ Kali (Hydra) → SSH → Ubuntu → Logs (/var/log/auth.log) → Splunk
 
 ---
 
-## 🚨 Simulação de Ataque
+ Simulação de Ataque
 
 Foi realizado um ataque de força bruta utilizando a ferramenta Hydra:
 
@@ -33,7 +33,7 @@ Esse ataque gerou milhares de tentativas de login mal sucedidas.
 
 ---
 
-## 📥 Ingestão de Logs
+ Ingestão de Logs
 
 Os logs foram coletados do arquivo:
 
@@ -49,7 +49,7 @@ index=soc_lab
 
 ---
 
-## 🔍 Detecção do Ataque
+ Detecção do Ataque
 
 A detecção foi feita com base em tentativas de login falhadas:
 
@@ -57,7 +57,7 @@ A detecção foi feita com base em tentativas de login falhadas:
 index=soc_lab "Failed password"
 ```
 
-### 🔥 Identificação do IP atacante
+ Identificação do IP atacante
 
 ```spl id="9l7b2x"
 index=soc_lab "Failed password"
@@ -68,7 +68,7 @@ index=soc_lab "Failed password"
 
 ---
 
-## 🚨 Criação de Alerta
+ Criação de Alerta
 
 Foi configurado um alerta no Splunk com as seguintes características:
 
@@ -78,7 +78,7 @@ Foi configurado um alerta no Splunk com as seguintes características:
 
 ---
 
-## 📊 Dashboard
+ Dashboard
 
 Foi desenvolvido um dashboard para visualização do ataque, contendo:
 
@@ -89,7 +89,7 @@ Foi desenvolvido um dashboard para visualização do ataque, contendo:
 
 ---
 
-## 📸 Evidências
+ Evidências
 
 ### Ataque com Hydra
 
@@ -109,7 +109,7 @@ Foi desenvolvido um dashboard para visualização do ataque, contendo:
 
 ---
 
-## 🎯 Habilidades Demonstradas
+ Habilidades Demonstradas
 
 * SIEM (Splunk)
 * Análise de logs
@@ -121,7 +121,7 @@ Foi desenvolvido um dashboard para visualização do ataque, contendo:
 
 ---
 
-## 🚀 Conclusão
+ Conclusão
 
 Este laboratório demonstra na prática como um ataque de força bruta pode ser detectado e analisado em um ambiente controlado utilizando Splunk.
 
